@@ -7,11 +7,11 @@ class Room:
         self.students = [] # list for booked
         self.queue = deque() # waiting list, FIFO
 
-    """Checking if room is full"""
+    # Checking if room is full
     def is_full(self):
         return len(self.students) >= self.capacity
 
-    """Adding student to room if is available, queue if not"""
+    # Adding student to room if is available, queue if not
     def add_student(self, student):
         if student in self.students:
             print(f"\n{student.student_name} is already booked in {self.room_id}.")
@@ -30,11 +30,11 @@ class Room:
             print(f"{self.room_id} is full. {student.student_name} is added to the waiting list.")
             return False
 
-    """adding student to waiting list"""
+    # Adding student to waiting list
     def add_to_queue(self, student):
         self.queue.append(student)
 
-    """remove student from waiting list, and adding the next one in line"""
+    # Remove student from waiting list, and adding the next one in line
     def remove_student(self, student):
         if student in self.students:
             self.students.remove(student)
@@ -44,7 +44,7 @@ class Room:
         else:
             print(f"{student.student_name} not in {self.room_id}.")
 
-    """adding next student to room if available"""
+    # adding next student to room if available
     def next_on_queue(self):
         if self.queue and not self.is_full():
             next_student = self.queue.popleft()
@@ -53,7 +53,7 @@ class Room:
             return next_student
         return None
 
-    """show all students that have booked rooms"""
+    # Show all students that have booked rooms
     def show_students(self):
         if self.students:
             print(f"\nStudents in {self.room_id}:")

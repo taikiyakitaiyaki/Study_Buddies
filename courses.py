@@ -20,12 +20,14 @@ class Courses:
         "TFL126": "Etikk, bærekraft og bedrifters samfunnsanvar"
     }
 
+    # Show all courses
     @classmethod
     def show_courses(cls):
         print("\nAvailable courses:")
         for code, name in cls.courses.items():
             print(f"{code}: {name}")
 
+    # Allow user to choose courses from the list
     @classmethod
     def choose_courses(cls):
         cls.show_courses()

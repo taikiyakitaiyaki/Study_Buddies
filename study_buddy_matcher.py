@@ -2,9 +2,11 @@ class StudyBuddyMatcher:
     def __init__(self):
         self.students = {} # id -> Student
 
+    # Add student to the matcher
     def add_student(self, student):
         self.students[student.student_id] = student
 
+    # Return a list of students enrolled in the given course
     def match_students(self, course_code):
         matched = []
         for student in self.students.values():
@@ -12,6 +14,7 @@ class StudyBuddyMatcher:
                 matched.append(student)
         return matched
 
+    # Add study buddies for a student based on a shared course
     def create_study_buddy(self, student, course_code):
         matches = self.match_students(course_code)
         for buddy in matches:

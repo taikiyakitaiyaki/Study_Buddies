@@ -6,11 +6,12 @@ class Student:
         self.booked_room = None
         self.study_buddies = []
 
+    # Adds a  study buddy if they are not already in the list
     def add_study_buddy(self, buddy):
         if buddy not in self.study_buddies:
             self.study_buddies.append(buddy)
 
-
+    # List all courses the student is enrolled in, sorted ny course code
     def list_courses(self):
         sorted_courses = sorted(self.courses.items())
         print(f"\nList of courses for {self.student_name}:")
@@ -18,6 +19,7 @@ class Student:
             print(f"{code}: {course_name}")
         return sorted_courses
 
+    # Show all study buddies, sorted by name
     def show_study_buddies(self):
         if not self.study_buddies:
             print("No buddies found")
@@ -34,7 +36,7 @@ class Student:
             else:
                 print(f"{study_buddy.student_name} - Course(s) {study_buddy.courses}.")
 
-    """show buddies room"""
+    # Show which room a specific buddy has booked
     def show_buddy_room(self, buddy):
 
         if buddy == self:
