@@ -4,6 +4,7 @@ from room import Room
 from room_manager import RoomManager
 from study_buddy_matcher import StudyBuddyMatcher
 
+# --- prompt user to create a new student ---
 def create_student():
     student_id = input("Enter student ID: ")
     student_name = input("Enter student name: ")
@@ -15,7 +16,7 @@ def create_student():
 matcher =StudyBuddyMatcher()
 room_manager = RoomManager()
 
-# --- Create rooms ---
+# --- Create rooms and add them to the room manager ---
 room1 = Room("B2 026", 4)
 room2 = Room("B2 024", 4)
 room3 = Room("B2 029", 6)
@@ -54,12 +55,13 @@ s5 = Student(5, "Tina Tønnesen", {
     "IS-211": "Algorithms and Data Structures",
 })
 
+# --- Add students to study buddy matcher ---
 matcher.add_student(s1)
 matcher.add_student(s2)
 matcher.add_student(s3)
 matcher.add_student(s4)
 
-# --- Find students taking IS-211 ---
+# --- Find students taking IS-211 and  create study buddies ---
 matches = matcher.match_students("IS-211")
 
 for student in matches:
@@ -73,6 +75,7 @@ room_manager.book_room("B2 026", s3)
 room_manager.book_room("B2 026", s4)
 room_manager.book_room("B2 026", s5)
 
+# --- Testing outputs ---
 room1.show_students()
 
 room_manager.find_room("B2 026")
