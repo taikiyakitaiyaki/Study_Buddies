@@ -22,8 +22,8 @@ python main.py
 To demonstrate time complexity and use of data structures in a practical application.
 
 ## Demo
-Live demo av prosjektet:
-https://v0
+Live demo of the project:
+https://v0-study-buddies-ui.vercel.app/
 
 ## Use of AI
 ChatGPT was used to generate and support development of the prototype.
