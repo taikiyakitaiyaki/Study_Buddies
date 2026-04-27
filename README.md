@@ -26,4 +26,4 @@ Live demo of the project:
 https://v0-study-buddies-ui.vercel.app/
 
 ## Use of AI
-ChatGPT was used to generate and support development of the prototype.
+ChatGPT and v0.app was used to generate and support development of the prototype.
