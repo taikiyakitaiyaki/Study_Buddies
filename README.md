@@ -21,5 +21,9 @@ python main.py
 ## Purpose
 To demonstrate time complexity and use of data structures in a practical application.
 
+## Demo
+Live demo av prosjektet:
+https://v0
+
 ## Use of AI
 ChatGPT was used to generate and support development of the prototype.
